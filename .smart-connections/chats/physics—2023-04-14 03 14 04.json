@@ -1,0 +1,44 @@
+[
+  [
+    {
+      "role": "user",
+      "content": "?"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "?"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "?\n"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "What is a good quantum number?"
+    }
+  ],
+  [
+    {
+      "role": "assistant",
+      "content": "A good quantum number is a quantum number that remains constant throughout a particular physical process or chemical reaction. This means that it is a property of a system that is conserved during the process or reaction. Examples of good quantum numbers include the total energy of a system, the total angular momentum, and the total spin. These quantum numbers are important in determining the allowed energy states and transitions of atoms and molecules, and they play a crucial role in understanding the behavior of matter at the atomic and molecular level."
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Give an example of a bad quantum number."
+    }
+  ],
+  [
+    {
+      "role": "assistant",
+      "content": "A bad quantum number is a quantum number that is not conserved during a particular physical process or chemical reaction. An example of a bad quantum number is the azimuthal quantum number (l) in the presence of a magnetic field. In the absence of a magnetic field, the azimuthal quantum number determines the magnitude of the angular momentum of an electron in an atom. However, in the presence of a magnetic field, the angular momentum of the electron is no longer conserved, and the azimuthal quantum number is no longer a good quantum number. Instead, the magnetic quantum number (m) becomes a good quantum number, as it determines the orientation of the angular momentum vector with respect to the magnetic field."
+    }
+  ]
+]

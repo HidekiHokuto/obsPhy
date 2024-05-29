@@ -1,0 +1,53 @@
+[
+  [
+    {
+      "role": "user",
+      "content": "Are you in GPT4?"
+    }
+  ],
+  [
+    {
+      "role": "assistant",
+      "content": "As an AI language model, I do not have a physical existence and therefore cannot be \"in\" anything. However, I am constantly being updated and improved by my developers, so you could say that I am always evolving towards a more advanced version. As of now, there is no official announcement or release date for GPT-4."
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "What should I learn next?"
+    }
+  ],
+  [
+    {
+      "role": "assistant",
+      "content": "Based on your notes, it seems like you have a diverse range of interests in physics and mathematics. If you're interested in continuing with quantum mechanics, you could explore more about Fermi's golden rule and spin. If you're interested in classical mechanics, you could learn more about Ludwig Eduard Boltzmann and his contributions to the field. If you're interested in electromagnetism, you could learn more about electromagnetic waves and boundary conditions. If you're interested in solid state physics, you could learn more about superconductivity, ferromagnetism, and magnetization. Additionally, you could explore partial differential equations and the separation of variables method, or read biographies on famous physicists such as Andrei Markov, Louis de Broglie, Lars Onsager, and Felix Bloch.",
+      "context": "Anticipate the type of answer desired by the user. Imagine the following 20 notes were written by the user and contain all the necessary information to answer the user's question. Begin responses with \"Based on your notes...\"\n---BEGIN #1---\nQuantum Mechanics > Fermi's golden rule:\n\n---END #1---\n---BEGIN #2---\nMathematics > Green function:\n\n---END #2---\n---BEGIN #3---\nSuperconductivity:\n\n---END #3---\n---BEGIN #4---\nLudwig Eduard Boltzmann:\n\n---END #4---\n---BEGIN #5---\nmagnetic dipole:\n\n---END #5---\n---BEGIN #6---\nThermodynamics > 绝对温标:\n\n---END #6---\n---BEGIN #7---\nBiography > 安德烈 · 马尔可夫:\n#人物志 \n---END #7---\n---BEGIN #8---\nBiography > 德布罗意:\n#人物志 \n---END #8---\n---BEGIN #9---\nBiography > 拉斯·昂萨格:\n#人物志 \n---END #9---\n---BEGIN #10---\nBiography > 布洛赫:\n#人物志 \n---END #10---\n---BEGIN #11---\n自旋:\n#量子力学\n---END #11---\n---BEGIN #12---\nClassical Electrodynamics > Electromagnetic Wave:\n[[Wave Equation]]\n---END #12---\n---BEGIN #13---\nMathematics > Partial Differential Equation:\n[[分离变量法]]\n---END #13---\n---BEGIN #14---\nBiography > Ludwig Eduard Boltzmann:\ntags:\n- Biography\n---END #14---\n---BEGIN #15---\nBiography > Euler:\ntags:\n- Biography\n---END #15---\n---BEGIN #16---\nHeisenberg Model:\n[[海森堡]]\n[[Ising Model]]\n---END #16---\n---BEGIN #17---\nMathematics > Boundary Condition:\n[[Partial Differential Equation]]\n---END #17---\n---BEGIN #18---\nFerromagnetism:\ntags:\n- Solid_State\n- Magnetism\n---END #18---\n---BEGIN #19---\nMagnetization:\ntags:\n- Solid_State\n- Magnetism\n- Classical_Electrodynamics\n---END #19---\n---BEGIN #20---\nThermodynamics > Laws of thermodynamics > First law:\n热力学第一定律写成微分形式是\n$$\\require{physics}\\delta Q= \\delta W+\\dd{E}=P\\dd{V}+\\dd{E}$$\n---\n---END #20---",
+      "hyd": "LEARNING > SKILLS > NEXT STEPS:\n\n- Research job market trends and identify in-demand skills\n- Consider your personal interests and passions\n- Evaluate your current skill set and identify areas for improvement\n- Seek advice from mentors or professionals in your desired field\n- Explore online courses, workshops, or certifications to gain new skills\n- Practice and apply your new skills through personal projects or volunteer work\n- Continuously learn and stay up-to-date with industry developments."
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "このノートをまとめて"
+    }
+  ],
+  [
+    {
+      "role": "assistant",
+      "content": "このノートには、物理学と数学に関する様々なトピックが含まれています。量子力学、古典力学、電磁気学、固体物理学など、幅広い分野に興味があるようです。次に学ぶべきこととしては、フェルミの黄金律やスピンについての量子力学、ルートヴィヒ・エドゥアルト・ボルツマンによる古典力学、電磁波や境界条件についての電磁気学、超伝導や磁化についての固体物理学、偏微分方程式と変数分離法、アンドレイ・マルコフ、ルイ・ド・ブロイ、ラーズ・オンサーガー、フェリ"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "[[Ising Model]] をまとめて"
+    }
+  ],
+  [
+    {
+      "role": "assistant",
+      "content": "Ising Modelは、物質の強磁性を記述するために使用される数学モデルです。このモデルは、スピンアップまたはスピンダウンを表す値+1または-1を取ることができる磁気モーメントの格子から構成されます。格子は、隣接するスピンが互いに影響を与える特定の相互作用パラメーターJに従っています。このモデルは物理的現実の単純化ですが、相転移を起こすことができ、2次元正方格子Isingモデルは、相転移を起こすことができる最も単純な物理系です。\n\nモデルのハミルトニアンは、相互作用パラメーターと外部",
+      "context": "Imagine the following notes were written by the user and contain the necessary information to synthesize a useful answer the user's query:\n---BEGIN NOTE: [[Ising Model]]---\n---\nnumber headings: auto, first-level 1, max 6, 1.1.\ntags:\n- Statistical_Mechanics\n- Solid_State\n- Condenced_Matter\n---\n\n# 1. Overview\n\nThe Ising Model is a mathematical model used to describe the [[ferromagnetism]] of matter. \n\nIt consists of a lattice of magnetic moments $\\sigma_i$ that can only take on the values of $+1$ or $-1$, representing spin up or spin down, respectively. The lattice is subject to specific interaction parameters $J$ that cause adjacent spins to influence each other.\n\n---\n\nAlthough the model is a simplification of physical reality, it can still undergo phase transitions, and a two-dimensional square lattice Ising model is the simplest known physical system that can undergo a phase transition.\n\n# 2. Definition\n\n\n## 2.1. [[Hamiltonian]]\n\nThe [[Hamiltonian]] of the system is defined by the interaction parameters and an external magnetic field. \n\n$$\n\\ham (\\sigma) = -\\sum_{\\ev{ij}}J_{ij} \\sigma_i \\sigma_j - \\mu\n\\sum_j h_j \\sigma_j \n$$\n\n$\\langle ij \\rangle$ denotes that the node $i$ and node $j$ are adjacent. Hence, the first term of [[hamiltonian]] is the summation of energy from **spin-spin interactions** without overlap.\n\n---\n\n>[!note]\n> If $J > 0$ , adjacent spins intend to be in same direction, the whole system represents [[ferromagnetism]]. Otherwise, [[diamagnetism]].\n\n\n\n\n而第二项则是***磁场和自旋交互作用的能量***。$\\mu$ 是晶格点***磁矩***的值，值得注意的是，电子的磁矩和他的自旋方向相反，所以哈密顿量的第二项应该要是正号比较合理，但在习惯上，还是会令第二项为负号.\n\n\n\n\n\n---\n\n## 2.2. [[Hyper cubic Lattice]]\n\n对于Ising模型，[[Spin]]的空间排布受到相互作用参数 $J_{ij}$，以及外部磁场 $h_j$ 的影响，进而决定系统的热力学量。[^1]\n\n---\n\n对于均匀磁场，我们考虑自旋在[[Hyper cubic Lattice]]上面的空间排布\n\n令晶格常数（lattice constant）为 $a$，超晶体一边长为 $L$，格点数为 $N$. \n\n则对 $d$ 维[[Hyper cubic Lattice]]有\n\n$$V = L^d = Na^d$$\n\n---\n\n对于任一格点，其最近邻格点数，即配位数 $z$（coordination number）满足\n\n$$z = 2d$$\n\n在热力学极限下，bond的数目\n\n$$\nN_{\\text{bond}} = Nz/2 = Nd$$\n---\n\n## 2.3. Thermodynamic variables\n\n### 2.3.1. [[Magnetization]]\n\n在Ising model中，[[Magnetization]]的表达式为\n$$\nM = \\sum_{i=1}^N \\ev{S_i}$$\n[[Partition Function#^7016be|系综平均]]\n\n\n---\n\n# 3. Phase transition\n\n---\n\n\n[^1]: Takahashi, Kazutaka, and Hidetoshi Nishimori. 相転移・臨界現象とくりこみ群. Tōkyō-to Chiyoda-ku: Maruzen Shuppan, 29.\n---END NOTE---\n"
+    }
+  ]
+]

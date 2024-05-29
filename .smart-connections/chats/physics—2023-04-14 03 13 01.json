@@ -1,0 +1,14 @@
+[
+  [
+    {
+      "role": "user",
+      "content": "?"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "What is a good quantum number?"
+    }
+  ]
+]

@@ -1,0 +1,65 @@
+Books/拓扑量子计算导论/6. Kitaev 蜂窝模型.md
+Books/物理中的李群/物理中的李群.md
+Books/相転移・臨界現象とくりこみ群/相变临界现象重正化群 3 平均场理论.md
+Books/量子信息与量子物质/chapter 1 关联与纠缠.md
+Books/量子力学新讲/6 量子力学中的对称性/6 量子力学中的对称性.md
+Books/量子霍尔佟大为/量子霍尔佟大为 1基础.md#Berry phase#阿贝尔 Berry phase#贝里相计算
+Home.md#TODO#2023#2023-12#2023-12-15
+Home.md#毛泽东#七律·人民解放军占领南京
+Home.md#毛泽东#七律·到韶山
+Home.md#毛泽东#卜算子·咏梅
+Home.md#毛泽东#忆秦娥·娄山关
+Home.md#苏轼#念奴娇·赤壁怀古
+Home.md#苏轼#赤壁赋
+Home.md#诗词选#毛泽东#七律·人民解放军占领南京
+Home.md#诗词选#毛泽东#七律·到韶山
+Home.md#诗词选#毛泽东#卜算子·咏梅
+Home.md#诗词选#毛泽东#忆秦娥·娄山关
+Home.md#诗词选#苏轼#念奴娇·赤壁怀古
+Home.md#诗词选#苏轼#记承天寺夜游
+Home.md#诗词选#苏轼#赤壁赋
+Notes/精确对角化.md
+Papers/2008/非阿贝尔任意子与量子拓扑计算.md
+Papers/2008非阿贝尔任意子与量子拓扑计算.md
+Papers/2011/Kitaev 模型的研究及其推广.md
+Papers/2011_Kitaev 模型的研究及其推广.md
+Papers/2020/2020_Kitaev 磁体中寻找马约拉纳费米子.md
+Papers/2020/Kitaev 磁体中寻找马约拉纳费米子.md
+Papers/2020_Kitaev 磁体中寻找马约拉纳费米子.md
+Papers/2023/局部磁场的 Vison 操纵.md
+Papers/2023/绝热规范势的 Lanczos 方法.md#摘要
+Papers/2023_局部磁场的 Vison 操纵.md
+Papers/Kitaev 模型导论-I.md
+Papers/Kitaev 模型导论-I.md#3. 序参量
+Papers/Kitaev 模型导论-I.md#3. 序参量#3.A. 键费米子形式
+Papers/Kitaev 模型导论-I.md#3. 序参量#3.B. 磁化
+Papers/Kitaev 模型导论-I.md#3. 序参量#3.C. 双自旋关联, 分数化, de-confinement
+Papers/Kitaev 模型导论-I.md#3. 序参量#3.C. 双自旋关联, 分数化, de-confinement#3.C.1. 分数化与 de-confinement
+Papers/Kitaev 模型导论-I.md#3. 序参量#3.D. 多自旋关联函数，拓扑简并
+Papers/Kitaev 模型导论-I.md#4. 讨论
+Papers/Kitaev 模型导论-I/2. Kitaev 模型.md
+Papers/Kitaev 模型导论-I/3. 序参量.md
+Papers/Kitaev 模型的研究及其推广.md
+Papers/Kitaev 磁体中寻找马约拉纳费米子.md
+Papers/局部磁场的 Vison 操纵.md
+Papers/未命名 1.md
+Papers/未命名.md
+Papers/精确可解模型及其他中的任意子.md#附录 A: 无涡相位稳定性的数值结果
+Papers/通过任意子的可容错量子计算.md
+Papers/量子自旋液体：综述.md
+Papers/非阿贝尔任意子与量子拓扑计算.md
+Papers/非阿贝尔任意子与量子拓扑计算.md#II 基本概念#A 非阿贝尔任意子#1 非阿贝尔编织统计#fusion rules
+Papers/非阿贝尔任意子与量子拓扑计算.md#III 物质以及非阿贝尔任意子的拓扑相
+Papers/非阿贝尔任意子与量子拓扑计算.md#III 物质以及非阿贝尔任意子的拓扑相#A 物质的拓扑相
+Papers/非阿贝尔任意子与量子拓扑计算.md#III 物质以及非阿贝尔任意子的拓扑相#A 物质的拓扑相#1 Chern-Simons Theory
+三国演义.md
+三国演义.md#第一回 宴桃園豪傑三結義　斬黃巾英雄首立功
+三国演义.md#第一百二十回 薦杜預老將獻新謀　降孫皓三分歸一統
+三国演义.md#第二回 張翼德怒鞭督郵　何國舅謀誅宦豎
+三国演义.md#第十回 勤王室馬騰舉義　報父讐曹操興師
+毕业论文 (中).md
+毕业论文 (中).md#Kitaev 模型
+毕业论文 (中).md#Majorana Fermionization#Parton
+毕业论文 (中).md#附录#Jordan-Wigner transformation
+精灵驿站攻略.md
+精确对角化.md

@@ -1,0 +1,2 @@
+
+In quantum computing and quantum communication, a stabilizer code is a class of [[quantum code|quantum codes]] for performing quantum error correction. The [[toric code model|toric code]], and [[surface codes]] more generally, are types of stabilizer codes considered very important for the practical realization of quantum information processing.

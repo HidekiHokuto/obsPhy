@@ -1,0 +1,2 @@
+**Walter Greiner**![[Screen Shot 2017-03-15 at 15.17.46.png#R|Walter Greiner|200]] (29 October 1935 – 6 October 2016) was a German theoretical physicist. His research interests lay in atomic physics, heavy ion physics, nuclear physics, elementary particle physics (particularly in quantum electrodynamics and quantum chromodynamics). He is known for his series of books in theoretical physics, particularly in Germany but also around the world.
+
