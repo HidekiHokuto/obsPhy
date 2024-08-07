@@ -15,7 +15,7 @@ DOI:
 这种情形通常发生在由多相共存的时候, 比如说, 气液相变或者*[[Bose-Einstein Condensation|玻色-爱因斯坦凝聚]]*.
 
 $$
-\ev*{\hat{R}} = \frac{\sum_\alpha \ev*{\me^{-\beta \qty(\hat{H} -\mu \hat{N})}}{\psi_\alpha}}{\sum_\alpha \ev*{\me^{-\beta \qty(\hat{H}-\mu \hat{N})}}{\psi_\alpha}}
+\ev*{\hat{R}} = \sum_\alpha\frac{ \ev{\me^{-\beta \qty(\hat{H} -\mu \hat{N})}\hat{R}}{\psi_\alpha}}{\sum_\alpha \ev*{\me^{-\beta \qty(\hat{H}-\mu \hat{N})}}{\psi_\alpha}}
 $$
 
 

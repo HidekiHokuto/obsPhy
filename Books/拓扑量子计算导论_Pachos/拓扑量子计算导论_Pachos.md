@@ -10,7 +10,7 @@ author:
 original title: Introduction to Topological Quantum Computation_Pachos
 year: "2012"
 ---
-[[1. 导言]]
+[[Books/拓扑量子计算导论_Pachos/1. 导言]]
 [[2. 几何和拓扑相]]
 [[3. 量子计算|3. 量子计算]]
 [[4. 任意子的计算能力]]
