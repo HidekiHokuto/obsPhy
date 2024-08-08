@@ -3,7 +3,7 @@ tags:
   - 论文
 created: 2024-08-07 13:11:16
 aliases:
-  - Tensor Network Python (TeNPy) version 1_Johannes
+  - Tensor Network Python (TeNPy) version 1_Hauschild
 DOI: https://arxiv.org/abs/2408.02010
 author:
   - Johannes Hauschild
@@ -124,10 +124,107 @@ $$
 $$
 H = -J \sum_{\ev{i,j}} \sigma_i^x \sigma_j^x - g \sum_{i} \sigma_i^z \tag{3}
 $$
+其中 $\sigma^\alpha$ 是特征值为 $\pm 1$ 的泡利矩阵。边界条件对应于无限长圆柱体。在 $y$-方向上，系统是周期性的，周长为 $L_y$. 在 $x$ 方向上，模拟的系统是无限的，并且我们选择宽度 $L_x = 2$ 的晶胞（总共具有 $L_x L_y = 2L_y$ 位点）用于 MPS 模拟。
 
+```python
+import tenpy
+g = 1.42 # example transverse field strength
+Ly = 4 # example cylinder circumference
+model_params = dict(
+	bc_MPS='infinite', bc_y='cylinder',
+	lattice='Square', Lx=2, Ly=Ly,
+	J=1, g=g,
+	conserve='best', # conserve parity
+	# conserve='None', # conserve nothing
+)
+model = tenpy.TFIModel(model_params)
+```
+该模型的最大阿贝尔对称性是 $Z_2$ 对称性，它保持了 up-spins 数的宇称 $Q = \sum_i (\sigma_i^z +1/2) \mod 2$，并且默认情况下是守恒的。
 
+其次，我们需要提供一个初始状态，从该状态开始模拟。我们选择 Néel 乘积态.
+```python
+psi = tenpy.MPS.from_lat_product_state(
+	model.lat , [[[’up’], [’down’]]]
+)
+```
+注意，当使用电荷守恒时，初始猜测确定目标状态的电荷扇区。
+
+我们现在配置一个密度矩阵扰动的 DMRG 引擎[^29]（mixer），最大键维数为 200，并丢弃 $10^{-10}$ 以下的奇异值.
+
+```python
+dmrg_params = dict(
+	mixer=True,
+	trunc_params=dict(
+		chi_max =200,
+		svd_min =1e-10,
+	),
+)
+engine = tenpy.TwoSiteDMRGEngine(
+	psi, model, dmrg_params
+)
+```
+
+我们现在可以运行 DMRG 来获得基态近似 `psi` 和它的能量。`engine.run()` 方法执行数值模拟，并向日志记录系统发送状态消息，可通过 `tenpy.setup_logging` 进行配置。最后，我们评估了一些可观的收敛基态。
+
+```python
+energy, psi = engine.run()
+mag_z = numpy.average(psi.expectation_value('Sz'))
+mag_x = numpy.average(psi.expectation_value('Sx'))
+corr_xx = psi.correlation_function(
+	'Sx', 'Sx', [0], [10 * model.lat.N_sites]
+)
+entropy = psi.entanglement_entropy()[0]
+```
+GitHub 存储库中提供了此示例的扩展版本。它包括横向场的值 $g$ 的网格上的外环，并生成图3和图4中的相图。
 
 ## 4.2. 使用 YAML 配置进行模拟
+
+我们可以使用 yaml config 输入格式来配置这样一个相图扫描，而不是在python代码中显式地循环。
+
+```yaml
+#!/usr/bin/env -S python -m tenpy
+simulation_class : GroundStateSearch
+
+model_class: TFIModel
+model_params:
+	bc_MPS: infinite
+	bc_y: cylinder
+	lattice: Square
+	Lx: 2
+	Ly: 4
+	J: 1
+	g: !py_eval |
+		np.linspace(2, 4, 101, endpoint=True)
+
+initial_state_params:
+	method: lat_product_state
+	product_state: [[[up], [down ]]]
+
+algorithm_class: TwoSiteDMRGEngine
+algorithm_params:
+	mixer: True
+	trunc_params:
+		svd_min: 1.e-10
+		chi_max: 258
+
+connect_measurements:
+	-   - tenpy.simulations.measurement
+		- m_onsite_expectation_value
+        - opname: Sz
+
+sequential:
+	recursive_keys:
+		- model_params.g
+
+directory: results
+output_filename_params:
+	prefix: dmrg_tfi_cylinder
+	parts:
+		model_params.g: 'g_ {0:.1f}'
+	suffix: .h5
+```
+
+第3-30行配置了一个模拟，它与上一节的 python 代码片段等价，只是我们已经将多个值的 grid 传递给了 $g$ 模型参数。剩下的行则指示应该对该 grid 的每个值重复模拟，并指定输出的文件名作为当前 $g$ 值的函数。在第 1 行的标题中，`yaml` 配置是可执行的，并将运行模拟。或者，可以使用 `tenpy-run` 命令行界面来运行此类模拟。有关 `yaml` 输入格式的完整规范，请参阅文档。
 
 # 5. Benchmarks
 
@@ -146,7 +243,7 @@ $$
 [^1]: M. Fannes, B. Nachtergaele and R. F. Werner, Finitely correlated states on quantum spin chains, Communications in Mathematical Physics 144(3), 443 (1992), doi:10.1007/BF02099178.
 [^2]: M. B. Hastings, An area law for one-dimensional quantum systems, Journal of Statistical Mechanics: Theory and Experiment 2007(08), P08024 (2007), doi:10.1088/17425468/2007/08/P08024.
 [^3]: S. R. White, Density matrix formulation for quantum renormalization groups, Physical Review Letters 69(19), 2863 (1992), doi:10.1103/PhysRevLett.69.2863.
-[^4]: U. Schollwoeck, The density-matrix renormalization group in the age of matrix product states, Annals of Physics 326(1), 96 (2011), doi:10.1016/j.aop.2010.09.012, ArXiv:1008.3477.
+[^4]: U. Schollwoeck, The density-matrix renormalization group in the age of matrix product states, Annals of Physics 326(1), 96 (2011), doi:10.1016/j.aop.2010.09.012, ArXiv:1008.3477.[[矩阵乘积态时代的密度矩阵重整化群]]
 [^5]: G. M. Crosswhite, A. C. Doherty and G. Vidal, Applying matrix product operators to model systems with long-range interactions, Physical Review B 78(3), 035116 (2008), doi:10.1103/PhysRevB.78.035116, ArXiv:0804.2504 [cond-mat, physics:quant-ph].
 [^6]: L. Tagliacozzo, T. R. de Oliveira, S. Iblisdir and J. I. Latorre, Scaling of entanglement support for matrix product states, Physical Review B 78(2), 024410 (2008), doi:10.1103/PhysRevB.78.024410, Publisher: American Physical Society.
 [^7]: F. Pollmann, S. Mukerjee, A. M. Turner and J. E. Moore, Theory of Finite-Entanglement Scaling at One-Dimensional Quantum Critical Points, Physical Review Letters 102(25), 255701 (2009), doi:10.1103/PhysRevLett.102.255701, Publisher: American Physical Society.

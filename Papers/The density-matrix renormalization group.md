@@ -1,11 +1,10 @@
 ---
-tags: 
-- Paper
-- 密度矩阵重整化群
-- DMRG
-number headings: first-level 1, max 6, 1.1.
+tags:
+  - Paper
+  - 密度矩阵重整化群
+  - DMRG
 created: 2023-06-17 19:59:01
-aliases: []
+aliases:
 ---
 
 # Abstract
