@@ -144,7 +144,7 @@ model = tenpy.TFIModel(model_params)
 其次，我们需要提供一个初始状态，从该状态开始模拟。我们选择 Néel 乘积态.
 ```python
 psi = tenpy.MPS.from_lat_product_state(
-	model.lat , [[[’up’], [’down’]]]
+	model.lat , [[['up'], ['down']]]
 )
 ```
 注意，当使用电荷守恒时，初始猜测确定目标状态的电荷扇区。
